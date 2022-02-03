@@ -45,7 +45,7 @@ const syncAndSeed = async () => {
     Actor.create({ name: "Leo" }),
     Actor.create({ name: "Meryl" }),
   ]);
-  console.log(devil.get());
+  //   console.log(devil.get());
 
   await Promise.all([
     Role.create({ character: "Sully", movieId: sully.id, actorId: hanks.id }),
