@@ -1,7 +1,12 @@
 const mocha = require("mocha");
 const { expect } = require("chai");
 const app = require("supertest")(require("../app"));
+const {
+  syncAndSeed,
+  models: { Actor, Movie, Role },
+} = require("../db");
 
+beforeEach(() => syncAndSeed());
 describe("my app", () => {
   describe("first tests", () => {
     it("foo equals to foo", () => {
